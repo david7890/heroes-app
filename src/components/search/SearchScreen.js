@@ -53,12 +53,13 @@ export const SearchScreen = ({history}) => {
                 <div className="col-7"> 
                     <h4>Results</h4>
                     <hr></hr>
-
+                    {/*si no ha buscado muestra */}
                     { (q==='') && <div className="alert alert-info">
                             Search a hero
                         </div>}
 
-                    { 
+                    {
+                        //si no encuentra la busqueda
                         (q !=='' && heroesFiltered.length === 0)
                             &&
                             <div className="alert alert-danger">
